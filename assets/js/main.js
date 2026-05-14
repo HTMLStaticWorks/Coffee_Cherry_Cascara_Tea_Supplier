@@ -1,0 +1,160 @@
+/* ============================================================
+   CASCARA LUXE — Main JavaScript
+   Handles Loader, Navigation, Theme Toggles, and Animations
+   ============================================================ */
+
+// ─── 1. Page Loader (Aggressive Check) ───
+const hideLoader = () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        loader.classList.add('hidden');
+        document.body.style.overflow = 'visible';
+    }
+};
+
+// Run immediately if the page is already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(hideLoader, 300);
+} else {
+    window.addEventListener('load', () => setTimeout(hideLoader, 500));
+}
+
+// Global fallback to ensure user never gets stuck
+setTimeout(hideLoader, 3000);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ─── 2. Header Scroll Effect ───
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (header && window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else if (header) {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // ─── 3. Mobile Menu Toggle ───
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'visible';
+            }
+        });
+    }
+
+    // ─── 4. Theme Toggle (Light/Dark) ───
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    themeToggles.forEach(toggle => {
+        const icon = toggle.querySelector('i');
+        if (currentTheme === 'dark' && icon) {
+            icon.classList.replace('ri-moon-line', 'ri-sun-line');
+        }
+
+        toggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            if (icon) {
+                if (newTheme === 'dark') {
+                    icon.classList.replace('ri-moon-line', 'ri-sun-line');
+                } else {
+                    icon.classList.replace('ri-sun-line', 'ri-moon-line');
+                }
+            }
+        });
+    });
+
+    // ─── 5. RTL Toggle ───
+    const rtlToggles = document.querySelectorAll('.rtl-toggle');
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentDir = document.documentElement.getAttribute('dir');
+            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            document.documentElement.setAttribute('dir', newDir);
+        });
+    });
+
+    // ─── 6. Scroll Reveal Animation ───
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+        revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < (window.innerHeight * 0.85);
+            if (isVisible) {
+                el.classList.add('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Run once on load
+
+    // ─── 7. Calculator Logic (Services Page) ───
+    const calcBtn = document.getElementById('calc-btn');
+    if (calcBtn) {
+        calcBtn.addEventListener('click', () => {
+            const type = document.getElementById('calc-type').value;
+            const qty = parseInt(document.getElementById('calc-qty').value) || 0;
+            const freq = document.getElementById('calc-freq').value;
+            const resultDisplay = document.getElementById('calc-price');
+            const savingsDisplay = document.getElementById('calc-savings');
+            
+            let basePrice = 18; // Default
+            if (type === 'retail') basePrice = 24;
+            if (type === 'extract') basePrice = 35;
+            if (type === 'blend') basePrice = 45;
+
+            let total = basePrice * qty;
+            let discount = 0;
+
+            if (freq === 'monthly') discount = 0.1;
+            if (freq === 'quarterly') discount = 0.15;
+            if (freq === 'annual') discount = 0.2;
+
+            const finalPrice = total * (1 - discount);
+            const savings = total - finalPrice;
+
+            resultDisplay.textContent = `$${finalPrice.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            if (savings > 0) {
+                savingsDisplay.textContent = `You save $${savings.toFixed(2)} with this frequency!`;
+                savingsDisplay.style.color = 'var(--gold)';
+            } else {
+                savingsDisplay.textContent = '';
+            }
+        });
+    }
+
+    // ─── 8. Password Toggle ───
+    const passToggles = document.querySelectorAll('.password-toggle');
+    passToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const input = btn.previousElementSibling;
+            const icon = btn.querySelector('i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('ri-eye-line', 'ri-eye-off-line');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('ri-eye-off-line', 'ri-eye-line');
+            }
+        });
+    });
+});

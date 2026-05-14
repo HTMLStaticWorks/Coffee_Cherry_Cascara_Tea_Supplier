@@ -1,0 +1,34 @@
+/* ============================================================
+   CASCARA LUXE — Dark Mode Styles
+   ============================================================ */
+
+[data-theme="dark"] {
+    --espresso:    #FAF6EE;
+    --gold:        #E8B84B;
+    --gold-light:  #F0D080;
+    --ivory:       #1C1008;
+    --ivory-dark:  #2D1C0C;
+    --ivory-mid:   #3D2C1C;
+    --text-primary:   #FAF6EE;
+    --text-secondary: #E8DCC8;
+    --text-muted:     #9A7A4A;
+    --bg-primary:     #1C1008;
+    --bg-secondary:   #2D1C0C;
+    --bg-card:        #251608;
+    --border:         rgba(200,146,42,0.15);
+}
+
+[data-theme="dark"] .header {
+    background: rgba(28,16,8,0.92);
+}
+
+[data-theme="dark"] .hero::before {
+    background: radial-gradient(circle, rgba(200,146,42,0.08) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .product-card, 
+[data-theme="dark"] .feature-card, 
+[data-theme="dark"] .glass-card {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(200,146,42,0.1);
+}

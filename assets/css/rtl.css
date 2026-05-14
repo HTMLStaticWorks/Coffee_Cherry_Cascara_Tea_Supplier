@@ -1,0 +1,32 @@
+/* ============================================================
+   CASCARA LUXE — RTL (Right-to-Left) Styles
+   ============================================================ */
+
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .nav-desktop,
+[dir="rtl"] .header-actions {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-stat-num {
+    text-align: right;
+}
+
+[dir="rtl"] .about-floater {
+    right: auto;
+    left: -1.5rem;
+}
+
+[dir="rtl"] .about-img-accent {
+    right: auto;
+    left: -2rem;
+}
+
+[dir="rtl"] .product-badge {
+    left: auto;
+    right: 1rem;
+}

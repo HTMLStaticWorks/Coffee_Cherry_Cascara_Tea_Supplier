@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Cascara Luxe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: radial-gradient(circle at top right, rgba(200,146,42,0.05), transparent 40%),
+                  radial-gradient(circle at bottom left, rgba(200,146,42,0.05), transparent 40%);
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .auth-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .auth-brand .brand-logo {
+      width: 54px; height: 54px;
+      font-size: 1.5rem;
+    }
+    .auth-brand .brand-name { font-size: 1.6rem; }
+    .auth-header { text-align: center; margin-bottom: 2rem; }
+    .auth-header h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .auth-header p { font-size: 0.9rem; color: var(--text-muted); }
+    
+    .input-group { margin-bottom: 1.5rem; }
+    .input-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-wrapper i {
+      position: absolute;
+      left: 1rem;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+    .input-wrapper .form-input {
+      padding-left: 3rem;
+      height: 54px;
+      width: 100%;
+    }
+    .password-toggle {
+      position: absolute;
+      right: 1rem;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      font-size: 0.88rem;
+    }
+    .auth-divider {
+      margin: 2rem 0;
+      position: relative;
+      text-align: center;
+    }
+    .auth-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      height: 1px;
+      background: var(--border);
+    }
+    .auth-divider span {
+      position: relative;
+      background: var(--bg-card);
+      padding: 0 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .social-auth { display: flex; gap: 1rem; }
+    .social-btn {
+      flex: 1;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .social-btn:hover { background: rgba(200,146,42,0.05); border-color: var(--gold); }
+    .auth-footer { margin-top: 2.5rem; text-align: center; font-size: 0.9rem; }
+    .auth-footer a { color: var(--gold); font-weight: 600; }
+  </style>
+</head>
+<body>
+<div id="page-loader"><div style="position:relative;display:flex;align-items:center;justify-content:center;"><div class="loader-ring"></div><span class="loader-brand">C</span></div></div>
+
+<main class="auth-page">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <div class="brand-logo"><i class="ri-leaf-line"></i></div>
+      <div class="brand-name">Cascara <span>Luxe</span></div>
+    </div>
+
+    <div class="auth-header">
+      <h2>Welcome Back</h2>
+      <p>Please enter your details to login</p>
+    </div>
+
+    <form id="login-form">
+      <div class="input-group">
+        <label class="input-label" for="email">Email Address</label>
+        <div class="input-wrapper">
+          <i class="ri-mail-line"></i>
+          <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="password">Password</label>
+        <div class="input-wrapper">
+          <i class="ri-lock-line"></i>
+          <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+          <button type="button" class="password-toggle"><i class="ri-eye-line"></i></button>
+        </div>
+      </div>
+
+      <div class="form-options">
+        <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer">
+          <input type="checkbox" style="accent-color:var(--gold)"> Remember me
+        </label>
+        <a href="#" style="color:var(--gold);font-weight:500">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-full btn-lg">Login to Account</button>
+
+      <div class="auth-divider">
+        <span>Or continue with</span>
+      </div>
+
+      <div class="social-auth">
+        <button type="button" class="social-btn"><i class="ri-google-fill"></i> Google</button>
+        <button type="button" class="social-btn"><i class="ri-apple-fill"></i> Apple</button>
+      </div>
+
+      <p class="auth-footer">
+        Don't have an account? <a href="register.html">Sign up for free</a>
+      </p>
+    </form>
+  </div>
+</main>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

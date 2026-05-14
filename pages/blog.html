@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Cascara Luxe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+</head>
+<body>
+<div id="page-loader"><div style="position:relative;display:flex;align-items:center;justify-content:center;"><div class="loader-ring"></div><span class="loader-brand">C</span></div></div>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo"><i class="ri-leaf-line"></i></div>
+      <div><span class="brand-name">Cascara <span>Luxe</span></span><span class="brand-tagline">Coffee Cherry Tea</span></div>
+    </a>
+    <nav class="nav-desktop">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
+      <button class="icon-btn rtl-toggle"><i class="ri-align-right"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm"><i class="ri-user-line"></i> Login</a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../index.html" class="mobile-nav-link">Home</a>
+  <a href="home2.html" class="mobile-nav-link">Home 2</a>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="services.html" class="mobile-nav-link">Services</a>
+  <a href="blog.html" class="mobile-nav-link active">Blog</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div class="mobile-actions">
+    <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
+    <button class="icon-btn rtl-toggle"><i class="ri-align-right"></i></button>
+    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+  </div>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="page-hero" style="padding-top:calc(var(--header-h) + 3rem)">
+    <div class="container">
+      <span class="section-label" style="color:var(--gold-light)">Knowledge & Culture</span>
+      <h1>The Cascara <em style="font-style:italic;color:var(--gold-light)">Journal</em></h1>
+      <p>Stories from the farm, brewing experiments, wellness science, and the evolving world of coffee fruit culture.</p>
+    </div>
+  </section>
+
+  <!-- ── SECTION 1: Featured Posts ── -->
+  <section class="blog-section" style="background:var(--bg-primary)" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Latest Articles</span>
+        <h2 class="section-title">Fresh From the <em style="font-style:italic;color:var(--gold)">Journal</em></h2>
+        <div class="divider-gold"></div>
+      </div>
+      <div class="blog-filter">
+        <button class="filter-btn active" data-category="all">All Articles</button>
+        <button class="filter-btn" data-category="brewing">Brewing</button>
+        <button class="filter-btn" data-category="sourcing">Sourcing</button>
+        <button class="filter-btn" data-category="health">Health</button>
+        <button class="filter-btn" data-category="recipes">Recipes</button>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal reveal-delay-1" data-category="sourcing">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Yemen Farm" class="blog-card-img" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Sourcing</span><i class="ri-calendar-line"></i>Dec 12, 2024<i class="ri-time-line"></i>6 min</div>
+            <h3>Inside Yemen's Ancient Cascara Farms</h3>
+            <p>We travelled to the Haraz mountains to meet the families who have been harvesting qishr for over 300 years.</p>
+            <a href="#" class="blog-read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-2" data-category="health">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80" alt="Health" class="blog-card-img" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Health</span><i class="ri-calendar-line"></i>Nov 28, 2024<i class="ri-time-line"></i>8 min</div>
+            <h3>Cascara vs Green Tea: The Antioxidant Showdown</h3>
+            <p>New research shows cascara may contain 4× more polyphenols than green tea — and significantly more than blueberries.</p>
+            <a href="#" class="blog-read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-3" data-category="brewing">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Brewing" class="blog-card-img" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Brewing</span><i class="ri-calendar-line"></i>Nov 14, 2024<i class="ri-time-line"></i>5 min</div>
+            <h3>The 15-Minute Cold Brew Cascara Method</h3>
+            <p>Skip the overnight steep. Our accelerated cold-brew technique delivers a rich, fruity concentrate in under 20 minutes.</p>
+            <a href="#" class="blog-read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-1" data-category="recipes">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80" alt="Cocktail" class="blog-card-img" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Recipes</span><i class="ri-calendar-line"></i>Oct 30, 2024<i class="ri-time-line"></i>4 min</div>
+            <h3>5 Cascara Cocktail Recipes for the Festive Season</h3>
+            <p>From cascara sours to warm mulled brews — our bartender-approved recipes for the holiday menu.</p>
+            <a href="#" class="blog-read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-2" data-category="sourcing">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Bolivia" class="blog-card-img" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Sourcing</span><i class="ri-calendar-line"></i>Oct 15, 2024<i class="ri-time-line"></i>7 min</div>
+            <h3>Bolivia's Hidden Cascara: A Discovery Trip</h3>
+            <p>Our sourcing team found an extraordinary wet-processed cascara at 1,850m in the Yungas region. Here's what happened next.</p>
+            <a href="#" class="blog-read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-3" data-category="health">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Gut Health" class="blog-card-img" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Health</span><i class="ri-calendar-line"></i>Sep 28, 2024<i class="ri-time-line"></i>9 min</div>
+            <h3>Cascara and Gut Health: What the Science Says</h3>
+            <p>Emerging prebiotic research suggests the pectin and fibre in cascara may meaningfully support microbiome diversity.</p>
+            <a href="#" class="blog-read-more">Read Article <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECTION 2: Featured / Highlight ── -->
+  <section class="section reveal" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Editor's Pick</span>
+        <h2 class="section-title">This Month's <em style="font-style:italic;color:var(--gold)">Spotlight</em></h2>
+        <div class="divider-gold"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden" class="reveal">
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
+             alt="Featured Post" style="width:100%;height:380px;object-fit:cover" loading="lazy" />
+        <div style="padding:2.5rem 2.5rem 2.5rem 0;text-align:center">
+          <span class="blog-tag" style="display:inline-block;margin-bottom:1rem">Feature</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);margin-bottom:1rem">The Complete Guide to Cascara: History, Health & How to Brew</h2>
+          <p style="margin-bottom:1.5rem">Our definitive 5,000-word guide covering everything from the origins of qishr in Yemen to the latest food-science research on coffee fruit polyphenols.</p>
+          <div class="blog-meta" style="justify-content:center;margin-bottom:1.5rem"><i class="ri-calendar-line"></i>January 2025<i class="ri-time-line"></i>25 min read</div>
+          <a href="#" class="btn btn-primary">Read Full Guide <i class="ri-book-open-line"></i></a>
+        </div>
+      </div>
+      <style>@media(max-width:768px){.spotlight-inner{grid-template-columns:1fr!important}.spotlight-inner img{height:220px!important}.spotlight-inner>div{padding:1.5rem!important}}</style>
+    </div>
+  </section>
+
+  <!-- ── SECTION 3: Newsletter ── -->
+  <section class="section reveal" style="background:var(--espresso)">
+    <div class="container container--sm">
+      <div class="section-header">
+        <span class="section-label" style="color:var(--gold-light)">Stay Informed</span>
+        <h2 class="section-title" style="color:var(--ivory)">Join the <em style="font-style:italic;color:var(--gold-light)">Newsletter</em></h2>
+        <div class="divider-gold"></div>
+        <p class="section-subtitle" style="color:rgba(250,246,238,0.6)">Monthly brewing guides, origin stories, and exclusive wholesale offers — no spam, ever.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,146,42,0.2);border-radius:var(--radius-xl);padding:3rem;max-width:540px;margin:0 auto;text-align:center" class="reveal">
+        <i class="ri-mail-send-line" style="font-size:3rem;color:var(--gold);margin-bottom:1.5rem;display:block"></i>
+        <h3 style="font-family:var(--font-display);font-size:1.6rem;color:var(--ivory);margin-bottom:0.5rem">Get the Cascara Brief</h3>
+        <p style="font-size:0.88rem;color:rgba(250,246,238,0.6);margin-bottom:2rem">Delivered to 12,000+ subscribers every month.</p>
+        <form id="newsletter-form" style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
+          <input type="email" class="form-input" placeholder="Your email address" style="flex:1;min-width:200px;background:rgba(255,255,255,0.07);border-color:rgba(200,146,42,0.3);color:var(--ivory)" required />
+          <button type="submit" class="btn btn-primary">Subscribe <i class="ri-arrow-right-line"></i></button>
+        </form>
+        <p style="font-size:0.75rem;color:rgba(250,246,238,0.35);margin-top:1rem;text-align:center">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-brand-wrap"><div class="footer-logo"><i class="ri-leaf-line"></i></div><span class="footer-brand-name">Cascara <span>Luxe</span></span></div><p class="footer-desc">Premium coffee cherry tea supplier. Sustainably sourced, ethically traded.</p><div class="footer-socials"><a href="#" class="footer-social"><i class="ri-instagram-line"></i></a><a href="#" class="footer-social"><i class="ri-twitter-x-line"></i></a><a href="#" class="footer-social"><i class="ri-linkedin-line"></i></a><a href="#" class="footer-social"><i class="ri-youtube-line"></i></a></div></div>
+      <div class="footer-col"><h4>Products</h4><div class="footer-links"><a href="services.html" class="footer-link">Dried Cascara Husks</a><a href="services.html" class="footer-link">Liquid Extracts</a><a href="services.html" class="footer-link">Retail Tea Bags</a><a href="services.html" class="footer-link">Custom Blends</a></div></div>
+      <div class="footer-col"><h4>Company</h4><div class="footer-links"><a href="about.html" class="footer-link">Our Story</a><a href="about.html" class="footer-link">Team</a><a href="blog.html" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-links"><div class="footer-contact-item"><i class="ri-map-pin-line"></i><span>14 Brew Lane, London EC1A 1BB</span></div><div class="footer-contact-item"><i class="ri-phone-line"></i><span>+44 20 7946 0321</span></div><div class="footer-contact-item"><i class="ri-mail-line"></i><span>hello@cascaraluxe.com</span></div></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Cascara Luxe Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a></div></div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>
+document.getElementById('newsletter-form')?.addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✓ Subscribed!';
+  btn.style.background = 'var(--espresso)';
+  btn.style.color = 'var(--gold)';
+  setTimeout(() => { btn.innerHTML = 'Subscribe <i class="ri-arrow-right-line"></i>'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+});
+</script>
+</body>
+</html>
