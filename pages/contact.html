@@ -1,261 +1,354 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Cascara Luxe</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+
+  <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+  
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/dark-mode.css" />
   <link rel="stylesheet" href="../assets/css/rtl.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
 </head>
+
 <body>
-<div id="page-loader"><div style="position:relative;display:flex;align-items:center;justify-content:center;"><div class="loader-ring"></div><span class="loader-brand">C</span></div></div>
+  <div id="page-loader">
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;">
+      <div class="loader-ring"></div><span class="loader-brand">C</span>
+    </div>
+  </div>
 
-<header class="header">
-  <div class="header-inner">
-    <a href="../index.html" class="brand">
-      <div class="brand-logo"><i class="ri-leaf-line"></i></div>
-      <div><span class="brand-name">Cascara <span>Luxe</span></span><span class="brand-tagline">Coffee Cherry Tea</span></div>
-    </a>
-    <nav class="nav-desktop">
-      <a href="../index.html" class="nav-link">Home</a>
-      <a href="home2.html" class="nav-link">Home 2</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link active">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
-      <button class="icon-btn rtl-toggle"><i class="ri-align-right"></i></button>
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand">
+        <div class="brand-logo"><i class="ri-leaf-line"></i></div>
+        <div><span class="brand-name">Cascara <span>Luxe</span></span><span class="brand-tagline"></span></div>
+      </a>
+      <nav class="nav-desktop">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle Direction">RTL</button>
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="ri-user-line"></i> Login</a>
+        <button class="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="home2.html" class="mobile-nav-link">Home 2</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="blog.html" class="mobile-nav-link">Blog</a>
+    <a href="contact.html" class="mobile-nav-link active">Contact</a>
+    <div class="mobile-actions">
+      <button class="icon-btn theme-toggle" aria-label="Theme"><i class="ri-moon-line"></i></button>
+      <button class="icon-btn rtl-toggle" aria-label="RTL">RTL</button>
       <a href="login.html" class="btn btn-primary btn-sm"><i class="ri-user-line"></i> Login</a>
-      <button class="hamburger"><span></span><span></span><span></span></button>
     </div>
   </div>
-</header>
-<div class="mobile-menu">
-  <a href="../index.html" class="mobile-nav-link">Home</a>
-  <a href="home2.html" class="mobile-nav-link">Home 2</a>
-  <a href="about.html" class="mobile-nav-link">About</a>
-  <a href="services.html" class="mobile-nav-link">Services</a>
-  <a href="blog.html" class="mobile-nav-link">Blog</a>
-  <a href="contact.html" class="mobile-nav-link active">Contact</a>
-  <div class="mobile-actions">
-    <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
-    <button class="icon-btn rtl-toggle"><i class="ri-align-right"></i></button>
-    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
-  </div>
-</div>
 
-<main>
+  <main>
 
-  <!-- Hero -->
-  <section class="page-hero" style="padding-top:calc(var(--header-h) + 3rem)">
-    <div class="container">
-      <span class="section-label" style="color:var(--gold-light)">Get in Touch</span>
-      <h1>Let's <em style="font-style:italic;color:var(--gold-light)">Connect</em></h1>
-      <p>Whether you're a café owner, retailer, or curious individual — we'd love to hear from you.</p>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="page-hero" style="padding-top:calc(var(--header-h) + 3rem)">
+      <div class="container">
+        <span class="section-label" style="color:var(--gold-light)">Get in Touch</span>
+        <h1>Let's <em style="font-style:italic;color:var(--gold-light)">Connect</em></h1>
+        <p>Whether you're a café owner, retailer, or curious individual — we'd love to hear from you.</p>
+      </div>
+    </section>
 
-  <!-- ── SECTION 1: Contact Form + Info ── -->
-  <section class="section reveal">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
+    <!-- ── SECTION 1: Contact Form + Info ── -->
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header">
           <span class="section-label">Reach Us</span>
           <h3>We're Here to <em style="font-style:italic;color:var(--gold)">Help</em></h3>
-          <p>Our team responds within 24 hours on business days. For urgent wholesale enquiries, call us directly.</p>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="ri-map-pin-line"></i></div>
-            <div class="contact-item-text">
-              <strong>Visit Us</strong>
-              <span>14 Brew Lane, Clerkenwell, London EC1A 1BB, United Kingdom</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="ri-phone-line"></i></div>
-            <div class="contact-item-text">
-              <strong>Call Us</strong>
-              <span>+44 20 7946 0321</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="ri-mail-line"></i></div>
-            <div class="contact-item-text">
-              <strong>Email Us</strong>
-              <span>hello@cascaraluxe.com</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="ri-time-line"></i></div>
-            <div class="contact-item-text">
-              <strong>Business Hours</strong>
-              <span>Monday–Friday: 9:00 AM – 6:00 PM GMT</span>
-            </div>
-          </div>
-          <div style="margin-top:1.5rem">
-            <p style="font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.75rem">Follow Us</p>
-            <div style="display:flex;gap:0.6rem">
-              <a href="#" class="icon-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-              <a href="#" class="icon-btn" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-              <a href="#" class="icon-btn" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
-              <a href="#" class="icon-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
-            </div>
-          </div>
+          <div class="divider-gold"></div>
+          <p class="section-subtitle">Our team responds within 24 hours on business days. For urgent wholesale
+            enquiries, call us directly.</p>
         </div>
 
-        <div class="contact-form">
-          <h3>Send a Message</h3>
-          <form id="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="name">Full Name *</label>
-                <input type="text" class="form-input" id="name" name="name" placeholder="Jane Smith" required />
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="ri-map-pin-line"></i></div>
+              <div class="contact-item-text">
+                <strong>Visit Us</strong>
+                <span>14 Brew Lane, Clerkenwell, London EC1A 1BB, United Kingdom</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="ri-map-pin-line"></i></div>
+              <div class="contact-item-text">
+                <strong>Branches</strong>
+                <span>UK, USA, Europe, India, China</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="ri-phone-line"></i></div>
+              <div class="contact-item-text">
+                <strong>Call Us</strong>
+                <span>+44 20 7946 0321</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="ri-mail-line"></i></div>
+              <div class="contact-item-text">
+                <strong>Email Us</strong>
+                <span>hello@cascaraluxe.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="ri-time-line"></i></div>
+              <div class="contact-item-text">
+                <strong>Business Hours</strong>
+                <span>Monday–Friday: 9:00 AM – 6:00 PM GMT</span>
+              </div>
+            </div>
+            <div style="margin-top:1.5rem">
+              <p
+                style="font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.75rem">
+                Follow Us</p>
+              <div style="display:flex;gap:0.6rem">
+                <a href="#" class="icon-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="icon-btn" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                <a href="#" class="icon-btn" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+                <a href="#" class="icon-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name *</label>
+                  <input type="text" class="form-input" id="name" name="name" placeholder="Jane Smith" required />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input type="email" class="form-input" id="email" name="email" placeholder="jane@example.com"
+                    required />
+                  <span class="form-error"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="company">Company / Café</label>
+                  <input type="text" class="form-input" id="company" name="company" placeholder="Your business name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="enquiry-type">Enquiry Type</label>
+                  <select class="form-select" id="enquiry-type" name="enquiry-type">
+                    <option value="">Select one...</option>
+                    <option value="wholesale">Wholesale Enquiry</option>
+                    <option value="samples">Free Samples</option>
+                    <option value="blending">Custom Blending</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group-full">
+                <label class="form-label" for="message">Message *</label>
+                <textarea class="form-textarea" id="message" name="message"
+                  placeholder="Tell us about your business and requirements..." required></textarea>
                 <span class="form-error"></span>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="email">Email Address *</label>
-                <input type="email" class="form-input" id="email" name="email" placeholder="jane@example.com" required />
-                <span class="form-error"></span>
+              <div class="file-upload-area" id="upload-area">
+                <i class="ri-upload-cloud-2-line"></i>
+                <p>Drag & drop files or click to upload</p>
+                <span>PDF, DOC, XLS up to 10MB</span>
+                <input type="file" id="file-input" style="display:none" accept=".pdf,.doc,.docx,.xls,.xlsx" />
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="company">Company / Café</label>
-                <input type="text" class="form-input" id="company" name="company" placeholder="Your business name" />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="enquiry-type">Enquiry Type</label>
-                <select class="form-select" id="enquiry-type" name="enquiry-type">
-                  <option value="">Select one...</option>
-                  <option value="wholesale">Wholesale Enquiry</option>
-                  <option value="samples">Free Samples</option>
-                  <option value="blending">Custom Blending</option>
-                  <option value="consultation">Consultation</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group-full">
-              <label class="form-label" for="message">Message *</label>
-              <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your business and requirements..." required></textarea>
-              <span class="form-error"></span>
-            </div>
-            <div class="file-upload-area" id="upload-area">
-              <i class="ri-upload-cloud-2-line"></i>
-              <p>Drag & drop files or click to upload</p>
-              <span>PDF, DOC, XLS up to 10MB</span>
-              <input type="file" id="file-input" style="display:none" accept=".pdf,.doc,.docx,.xls,.xlsx" />
-            </div>
-            <button type="submit" class="btn btn-primary w-full btn-lg">
-              <i class="ri-send-plane-line"></i> Send Message
-            </button>
-          </form>
+              <button type="submit" class="btn btn-primary w-full btn-lg">
+                <i class="ri-send-plane-line"></i> Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── SECTION 2: Map / Location Visual ── -->
-  <section class="section section-alt reveal">
+    <!-- ── SECTION 2: Map / Location Visual ── -->
+    <section class="section section-alt reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Our Location</span>
+          <h2 class="section-title">Visit Our <em style="font-style:italic;color:var(--gold)">Studio</em></h2>
+          <div class="divider-gold"></div>
+          <p class="section-subtitle">Based in the heart of Clerkenwell, London — a 5-minute walk from Farringdon
+            station. Tasting appointments available.</p>
+        </div>
+        <div
+          style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg)">
+          <div class="map-container" style="height:400px;position:relative;background:var(--bg-secondary)">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.684157140669!2d-0.1065798233777555!3d51.52014850989098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b513364f3fd%3A0x633d28905e3f4388!2sFarringdon!5e0!3m2!1sen!2suk!4v1715773100000!5m2!1sen!2suk"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="location-amenities"
+            style="padding:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center">
+            <div>
+              <i class="ri-train-line"
+                style="font-size:1.5rem;color:var(--gold);margin-bottom:0.5rem;display:block"></i>
+              <strong style="display:block;font-size:0.88rem;margin-bottom:0.2rem">Farringdon Station</strong>
+              <span style="font-size:0.8rem;color:var(--text-muted)">5 min walk · Circle, Metropolitan, Elizabeth
+                lines</span>
+            </div>
+            <div>
+              <i class="ri-parking-box-line"
+                style="font-size:1.5rem;color:var(--gold);margin-bottom:0.5rem;display:block"></i>
+              <strong style="display:block;font-size:0.88rem;margin-bottom:0.2rem">Parking Available</strong>
+              <span style="font-size:0.8rem;color:var(--text-muted)">Smithfield NCP car park — 3 min walk</span>
+            </div>
+            <div>
+              <i class="ri-time-line" style="font-size:1.5rem;color:var(--gold);margin-bottom:0.5rem;display:block"></i>
+              <strong style="display:block;font-size:0.88rem;margin-bottom:0.2rem">Studio Hours</strong>
+              <span style="font-size:0.8rem;color:var(--text-muted)">Mon–Fri 9am–6pm · Sat by appointment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: FAQ ── -->
+    <section class="section reveal">
+      <div class="container container--sm">
+        <div class="section-header">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Common <em style="font-style:italic;color:var(--gold)">Questions</em></h2>
+          <div class="divider-gold"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <details
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer;transition:all 0.3s ease"
+            class="faq-item">
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
+              What is the minimum order quantity for wholesale?
+              <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
+            </summary>
+            <p style="margin-top:1rem;font-size:0.9rem">Our Café Tier starts at just 5 units (1.25 kg). Retailer and
+              Distributor tiers have higher MOQs but come with significant per-unit savings. Contact us to discuss your
+              needs.</p>
+          </details>
+          <details
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer"
+            class="faq-item">
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
+              Do you offer free samples?
+              <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
+            </summary>
+            <p style="margin-top:1rem;font-size:0.9rem">Yes. We send a complimentary 4-origin sample pack (approx. 60g
+              total) to qualified businesses. Fill in the contact form and select "Free Samples" as your enquiry type.
+            </p>
+          </details>
+          <details
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer"
+            class="faq-item">
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
+              Where do you ship to?
+              <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
+            </summary>
+            <p style="margin-top:1rem;font-size:0.9rem">We ship to 28 countries worldwide. Free shipping applies to UK
+              orders over 5 kg and EU orders over 10 kg. International rates are calculated at checkout.</p>
+          </details>
+          <details
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer"
+            class="faq-item">
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
+              Can I create a custom blend?
+              <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
+            </summary>
+            <p style="margin-top:1rem;font-size:0.9rem">Absolutely. Our tea sommelier works with you to develop unique
+              flavour profiles. Custom blending is available from the Retailer tier (20+ unit orders). Book a
+              consultation to get started.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Our Location</span>
-        <h2 class="section-title">Visit Our <em style="font-style:italic;color:var(--gold)">Studio</em></h2>
-        <div class="divider-gold"></div>
-        <p class="section-subtitle">Based in the heart of Clerkenwell, London — a 5-minute walk from Farringdon station. Tasting appointments available.</p>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg)">
-        <div style="background:linear-gradient(135deg,var(--espresso),#2d1c0c);height:320px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
-          <div style="position:absolute;inset:0;background:radial-gradient(circle at center,rgba(200,146,42,0.15),transparent 70%)"></div>
-          <div style="text-align:center;position:relative;z-index:1">
-            <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--espresso);margin:0 auto 1rem;box-shadow:var(--shadow-gold)">
-              <i class="ri-map-pin-2-fill"></i>
-            </div>
-            <p style="color:var(--ivory);font-family:var(--font-display);font-size:1.4rem;margin-bottom:0.25rem">14 Brew Lane, Clerkenwell</p>
-            <p style="color:rgba(250,246,238,0.5);font-size:0.88rem">London EC1A 1BB · Near Farringdon Station</p>
-          </div>
-          <!-- Decorative circles -->
-          <div style="position:absolute;top:-60px;left:-60px;width:200px;height:200px;border:1px dashed rgba(200,146,42,0.2);border-radius:50%"></div>
-          <div style="position:absolute;bottom:-80px;right:-80px;width:280px;height:280px;border:1px dashed rgba(200,146,42,0.15);border-radius:50%"></div>
-        </div>
-        <div style="padding:2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:center">
-          <div>
-            <i class="ri-train-line" style="font-size:1.5rem;color:var(--gold);margin-bottom:0.5rem;display:block"></i>
-            <strong style="display:block;font-size:0.88rem;margin-bottom:0.2rem">Farringdon Station</strong>
-            <span style="font-size:0.8rem;color:var(--text-muted)">5 min walk · Circle, Metropolitan, Elizabeth lines</span>
-          </div>
-          <div>
-            <i class="ri-parking-box-line" style="font-size:1.5rem;color:var(--gold);margin-bottom:0.5rem;display:block"></i>
-            <strong style="display:block;font-size:0.88rem;margin-bottom:0.2rem">Parking Available</strong>
-            <span style="font-size:0.8rem;color:var(--text-muted)">Smithfield NCP car park — 3 min walk</span>
-          </div>
-          <div>
-            <i class="ri-time-line" style="font-size:1.5rem;color:var(--gold);margin-bottom:0.5rem;display:block"></i>
-            <strong style="display:block;font-size:0.88rem;margin-bottom:0.2rem">Studio Hours</strong>
-            <span style="font-size:0.8rem;color:var(--text-muted)">Mon–Fri 9am–6pm · Sat by appointment</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand"><div class="brand-logo"><i class="ri-leaf-line"></i></div><div class="brand-name">Cascara <span>Luxe</span></div></a>
+          <p class="footer-desc">Premium coffee cherry tea supplier. Sustainably sourced, ethically traded, and expertly crafted for the modern palate.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="#" class="footer-social" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
           </div>
         </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Dried Cascara Husks</a>
+            <a href="services.html" class="footer-link">Liquid Extracts</a>
+            <a href="services.html" class="footer-link">Retail Tea Bags</a>
+            <a href="services.html" class="footer-link">Custom Blends</a>
+            <a href="services.html" class="footer-link">Wholesale Packs</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">Our Story</a>
+            <a href="about.html" class="footer-link">Team</a>
+            <a href="blog.html" class="footer-link">Blog</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="contact.html" class="footer-link">Careers</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <div class="footer-contact-item"><i class="ri-map-pin-line"></i><span>14 Brew Lane, London EC1A 1BB</span></div>
+            <div class="footer-contact-item"><i class="ri-phone-line"></i><span>+44 20 7946 0321</span></div>
+            <div class="footer-contact-item"><i class="ri-mail-line"></i><span>hello@cascaraluxe.com</span></div>
+            <div class="footer-contact-item"><i class="ri-time-line"></i><span>Mon–Fri: 9am – 6pm GMT</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Cascara Luxe Ltd. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- ── SECTION 3: FAQ ── -->
-  <section class="section reveal">
-    <div class="container container--sm">
-      <div class="section-header">
-        <span class="section-label">FAQ</span>
-        <h2 class="section-title">Common <em style="font-style:italic;color:var(--gold)">Questions</em></h2>
-        <div class="divider-gold"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:1rem">
-        <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer;transition:all 0.3s ease" class="faq-item">
-          <summary style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            What is the minimum order quantity for wholesale?
-            <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
-          </summary>
-          <p style="margin-top:1rem;font-size:0.9rem">Our Café Tier starts at just 5 units (1.25 kg). Retailer and Distributor tiers have higher MOQs but come with significant per-unit savings. Contact us to discuss your needs.</p>
-        </details>
-        <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer" class="faq-item">
-          <summary style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Do you offer free samples?
-            <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
-          </summary>
-          <p style="margin-top:1rem;font-size:0.9rem">Yes. We send a complimentary 4-origin sample pack (approx. 60g total) to qualified businesses. Fill in the contact form and select "Free Samples" as your enquiry type.</p>
-        </details>
-        <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer" class="faq-item">
-          <summary style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Where do you ship to?
-            <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
-          </summary>
-          <p style="margin-top:1rem;font-size:0.9rem">We ship to 28 countries worldwide. Free shipping applies to UK orders over 5 kg and EU orders over 10 kg. International rates are calculated at checkout.</p>
-        </details>
-        <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;cursor:pointer" class="faq-item">
-          <summary style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center">
-            Can I create a custom blend?
-            <i class="ri-add-line" style="color:var(--gold);flex-shrink:0"></i>
-          </summary>
-          <p style="margin-top:1rem;font-size:0.9rem">Absolutely. Our tea sommelier works with you to develop unique flavour profiles. Custom blending is available from the Retailer tier (20+ unit orders). Book a consultation to get started.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-brand-wrap"><div class="footer-logo"><i class="ri-leaf-line"></i></div><span class="footer-brand-name">Cascara <span>Luxe</span></span></div><p class="footer-desc">Premium coffee cherry tea supplier. Sustainably sourced, ethically traded.</p><div class="footer-socials"><a href="#" class="footer-social"><i class="ri-instagram-line"></i></a><a href="#" class="footer-social"><i class="ri-twitter-x-line"></i></a><a href="#" class="footer-social"><i class="ri-linkedin-line"></i></a><a href="#" class="footer-social"><i class="ri-youtube-line"></i></a></div></div>
-      <div class="footer-col"><h4>Products</h4><div class="footer-links"><a href="services.html" class="footer-link">Dried Cascara Husks</a><a href="services.html" class="footer-link">Liquid Extracts</a><a href="services.html" class="footer-link">Retail Tea Bags</a><a href="services.html" class="footer-link">Custom Blends</a></div></div>
-      <div class="footer-col"><h4>Company</h4><div class="footer-links"><a href="about.html" class="footer-link">Our Story</a><a href="about.html" class="footer-link">Team</a><a href="blog.html" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-links"><div class="footer-contact-item"><i class="ri-map-pin-line"></i><span>14 Brew Lane, London EC1A 1BB</span></div><div class="footer-contact-item"><i class="ri-phone-line"></i><span>+44 20 7946 0321</span></div><div class="footer-contact-item"><i class="ri-mail-line"></i><span>hello@cascaraluxe.com</span></div></div></div>
-    </div>
-    <div class="footer-bottom"><p>© 2025 Cascara Luxe Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a></div></div>
-  </div>
-</footer>
-<script src="../assets/js/main.js"></script>
+  </footer>
+  <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
+
+
+
+

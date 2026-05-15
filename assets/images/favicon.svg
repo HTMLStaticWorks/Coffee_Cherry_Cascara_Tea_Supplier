@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C8922A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8B84B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#goldGrad)" />
+  <!-- Simple Leaf Icon similar to ri-leaf-line -->
+  <path d="M50 25C50 25 30 40 30 60C30 75 40 80 50 80C60 80 70 75 70 60C70 40 50 25 50 25ZM50 75C42 75 35 70 35 60C35 45 50 32 50 32C50 32 65 45 65 60C65 70 58 75 50 75Z" fill="#1C1008" />
+  <path d="M50 32V75" stroke="#1C1008" stroke-width="2" stroke-linecap="round" />
+</svg>

@@ -18,7 +18,8 @@
     --border:         rgba(200,146,42,0.15);
 }
 
-[data-theme="dark"] .header {
+[data-theme="dark"] .header,
+[data-theme="dark"] .footer {
     background: rgba(28,16,8,0.92);
 }
 

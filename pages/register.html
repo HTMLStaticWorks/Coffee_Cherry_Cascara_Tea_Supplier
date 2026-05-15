@@ -4,20 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register — Cascara Luxe</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+
+  <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+  
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/dark-mode.css" />
   <link rel="stylesheet" href="../assets/css/rtl.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
   <style>
-    .auth-page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      background: radial-gradient(circle at top right, rgba(200,146,42,0.05), transparent 40%),
-                  radial-gradient(circle at bottom left, rgba(200,146,42,0.05), transparent 40%);
-    }
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem 2rem; /* Increased top padding to clear toggles */
+  position: relative;
+  background: radial-gradient(circle at top right, rgba(200,146,42,0.05), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(200,146,42,0.05), transparent 40%);
+}
+
+.auth-toggles {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 1100;
+}
     .auth-card {
       width: 100%;
       max-width: 480px;
@@ -27,19 +42,10 @@
       padding: 3rem 2.5rem;
       box-shadow: var(--shadow-lg);
     }
-    .auth-brand {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
+    .brand {
+      justify-content: center;
       margin-bottom: 2.5rem;
-      text-align: center;
     }
-    .auth-brand .brand-logo {
-      width: 54px; height: 54px;
-      font-size: 1.5rem;
-    }
-    .auth-brand .brand-name { font-size: 1.6rem; }
     .auth-header { text-align: center; margin-bottom: 2rem; }
     .auth-header h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
     .auth-header p { font-size: 0.9rem; color: var(--text-muted); }
@@ -56,27 +62,61 @@
     }
     .input-wrapper {
       position: relative;
-      display: flex;
-      align-items: center;
+      width: 100%;
     }
     .input-wrapper i {
       position: absolute;
-      left: 1rem;
+      left: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
       color: var(--gold);
       font-size: 1.1rem;
+      pointer-events: none;
+      z-index: 5;
     }
     .input-wrapper .form-input {
-      padding-left: 3rem;
-      height: 52px;
+      display: block;
       width: 100%;
+      max-width: 100% !important;
+      height: 52px;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+    .input-wrapper .form-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: var(--bg-card);
+      box-shadow: 0 0 0 4px rgba(200, 146, 42, 0.1);
     }
     .password-toggle {
       position: absolute;
-      right: 1rem;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      width: 44px;
+      height: 44px;
+      margin: 0 !important;
+      padding: 0;
       color: var(--text-muted);
       font-size: 1.1rem;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      z-index: 5;
     }
+    .password-toggle:hover { color: var(--gold); }
     .form-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -87,24 +127,23 @@
     }
     .auth-divider {
       margin: 1.5rem 0;
-      position: relative;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
-    .auth-divider::before {
+    .auth-divider::before,
+    .auth-divider::after {
       content: '';
-      position: absolute;
-      top: 50%; left: 0; right: 0;
+      flex: 1;
       height: 1px;
       background: var(--border);
     }
     .auth-divider span {
-      position: relative;
-      background: var(--bg-card);
-      padding: 0 1rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      flex: 0 0 auto;
     }
     .social-auth { display: flex; gap: 1rem; }
     .social-btn {
@@ -119,20 +158,33 @@
       font-weight: 500;
       transition: var(--transition);
     }
-    .social-btn:hover { background: rgba(200,146,42,0.05); border-color: var(--gold); }
+    .social-btn:hover { background: rgba(200,146,42,0.08); border-color: var(--gold); transform: translateY(-2px); }
     .auth-footer { margin-top: 2rem; text-align: center; font-size: 0.9rem; }
-    .auth-footer a { color: var(--gold); font-weight: 600; }
+    .auth-footer a { color: var(--gold); font-weight: 600; transition: var(--transition); }
+    .auth-footer a:hover { color: var(--gold-light); text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .auth-card { padding: 2.5rem 1.25rem; }
+      .input-wrapper .form-input { padding-left: 2.5rem; }
+      .input-wrapper i { left: 0.85rem; }
+      .input-group label span { font-size: 0.78rem; }
+    }
   </style>
 </head>
 <body>
 <div id="page-loader"><div style="position:relative;display:flex;align-items:center;justify-content:center;"><div class="loader-ring"></div><span class="loader-brand">C</span></div></div>
 
+<div class="auth-toggles">
+  <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme"><i class="ri-moon-line"></i></button>
+  <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle Direction">RTL</button>
+</div>
+
 <main class="auth-page">
   <div class="auth-card">
-    <div class="auth-brand">
+    <a href="../index.html" class="brand">
       <div class="brand-logo"><i class="ri-leaf-line"></i></div>
       <div class="brand-name">Cascara <span>Luxe</span></div>
-    </div>
+    </a>
 
     <div class="auth-header">
       <h2>Join the Circle</h2>
@@ -143,35 +195,31 @@
       <div class="input-group">
         <label class="input-label" for="fullname">Full Name</label>
         <div class="input-wrapper">
-          <i class="ri-user-line"></i>
-          <input type="text" id="fullname" class="form-input" placeholder="Jane Smith" required>
+          <input type="text" id="fullname" class="form-input" placeholder="" required>
         </div>
       </div>
 
       <div class="input-group">
         <label class="input-label" for="email">Email Address</label>
         <div class="input-wrapper">
-          <i class="ri-mail-line"></i>
-          <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+          <input type="email" id="email" class="form-input" placeholder="" required>
         </div>
       </div>
 
-      <div class="form-row">
         <div class="input-group">
           <label class="input-label" for="password">Password</label>
           <div class="input-wrapper">
-            <i class="ri-lock-line"></i>
-            <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+            <input type="password" id="password" class="form-input" placeholder="" required>
+            <button type="button" class="password-toggle"><i class="ri-eye-line"></i></button>
           </div>
         </div>
         <div class="input-group">
-          <label class="input-label" for="confirm">Confirm</label>
+          <label class="input-label" for="confirm">Confirm Password</label>
           <div class="input-wrapper">
-            <i class="ri-lock-check-line"></i>
-            <input type="password" id="confirm" class="form-input" placeholder="••••••••" required>
+            <input type="password" id="confirm" class="form-input" placeholder="" required>
+            <button type="button" class="password-toggle"><i class="ri-eye-line"></i></button>
           </div>
         </div>
-      </div>
 
       <div class="input-group" style="margin-bottom:2rem">
         <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer;font-size:0.85rem;line-height:1.4">
@@ -201,3 +249,7 @@
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+

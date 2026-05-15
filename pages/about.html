@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us — Cascara Luxe</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+
+  <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+  
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/dark-mode.css" />
   <link rel="stylesheet" href="../assets/css/rtl.css" />
@@ -16,7 +21,7 @@
   <div class="header-inner">
     <a href="../index.html" class="brand">
       <div class="brand-logo"><i class="ri-leaf-line"></i></div>
-      <div><span class="brand-name">Cascara <span>Luxe</span></span><span class="brand-tagline">Coffee Cherry Tea</span></div>
+      <div><span class="brand-name">Cascara <span>Luxe</span></span></div>
     </a>
     <nav class="nav-desktop">
       <a href="../index.html" class="nav-link">Home</a>
@@ -28,7 +33,7 @@
     </nav>
     <div class="header-actions">
       <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
-      <button class="icon-btn rtl-toggle"><i class="ri-align-right"></i></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle Direction">RTL</button>
       <a href="login.html" class="btn btn-primary btn-sm"><i class="ri-user-line"></i> Login</a>
       <button class="hamburger"><span></span><span></span><span></span></button>
     </div>
@@ -42,9 +47,9 @@
   <a href="blog.html" class="mobile-nav-link">Blog</a>
   <a href="contact.html" class="mobile-nav-link">Contact</a>
   <div class="mobile-actions">
-    <button class="icon-btn theme-toggle"><i class="ri-moon-line"></i></button>
-    <button class="icon-btn rtl-toggle"><i class="ri-align-right"></i></button>
-    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    <button class="icon-btn theme-toggle" aria-label="Theme"><i class="ri-moon-line"></i></button>
+    <button class="icon-btn rtl-toggle" aria-label="RTL">RTL</button>
+    <a href="login.html" class="btn btn-primary btn-sm"><i class="ri-user-line"></i> Login</a>
   </div>
 </div>
 
@@ -64,9 +69,8 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-img-wrap">
-          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80"
+          <img src="https://images.ctfassets.net/yzlb24ni1fxz/7AZu78oogqEZfl7wRia3OB/320407980291c4932a9e03beedd41adf/Medium-22498.jpg?fm=webp&q=75&w=2048"
                alt="Farm landscape" class="about-img-main" loading="lazy" />
-          <div class="about-floater">10+<small>Years</small></div>
         </div>
         <div>
           <span class="section-label">Our Mission</span>
@@ -109,7 +113,7 @@
       <div class="team-grid">
         <div class="team-card reveal reveal-delay-1">
           <div class="team-img-wrap">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="James Hartley" class="team-img" loading="lazy" />
+            <img src="https://www.acluutah.org/app/uploads/2025/06/Aaron-Welcher.png" alt="James Hartley" class="team-img" loading="lazy" />
           </div>
           <div class="team-card-body">
             <div class="team-name">James Hartley</div>
@@ -124,7 +128,7 @@
         </div>
         <div class="team-card reveal reveal-delay-2">
           <div class="team-img-wrap">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Amara Osei" class="team-img" loading="lazy" />
+            <img src="https://cdn-images.dzcdn.net/images/cover/eb96498b64d2be300141ecb63ddf330b/0x1900-000000-80-0-0.jpg" alt="Amara Osei" class="team-img" loading="lazy" />
           </div>
           <div class="team-card-body">
             <div class="team-name">Amara Osei</div>
@@ -167,16 +171,25 @@
       </div>
       <div class="features-grid">
         <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-img-wrap">
+            <img src="https://drinkbegoat.com/cdn/shop/articles/Screenshot_2025-07-23_at_1.05.13_PM.png?v=1753301506" alt="World Coffee Award" class="feature-img" />
+          </div>
           <div class="feature-icon"><i class="ri-trophy-line"></i></div>
           <h3>Best Cascara 2024</h3>
           <p>World Coffee Awards — Gold Medal for Ethiopian Yirgacheffe single-origin cascara.</p>
         </div>
         <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-img-wrap">
+            <img src="https://media.aimr.asia/live/wp-content/uploads/2024/08/Impact-of-Sustainability-Leadership-on-Future-Corporate-Performance.jpg" alt="Sustainability Award" class="feature-img" />
+          </div>
           <div class="feature-icon"><i class="ri-leaf-line"></i></div>
           <h3>Sustainability Leader</h3>
           <p>B Corp certified 2022. Recognised by Rainforest Alliance for zero-waste supply chain innovation.</p>
         </div>
         <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-img-wrap">
+            <img src="https://madebyadele.com/cdn/shop/articles/Untitled_design_jpg_bfc19471-66ad-447a-8049-6f37042c0c5c.jpg?v=1753868079" alt="Great Taste Award" class="feature-img" />
+          </div>
           <div class="feature-icon"><i class="ri-star-line"></i></div>
           <h3>Great Taste Award</h3>
           <p>Three consecutive years of Great Taste Gold Stars for our dried cascara and extract ranges.</p>
@@ -194,22 +207,52 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-brand-wrap"><div class="footer-logo"><i class="ri-leaf-line"></i></div><span class="footer-brand-name">Cascara <span>Luxe</span></span></div>
+        <a href="../index.html" class="brand"><div class="brand-logo"><i class="ri-leaf-line"></i></div><div class="brand-name">Cascara <span>Luxe</span></div></a>
         <p class="footer-desc">Premium coffee cherry tea supplier. Sustainably sourced, ethically traded, and expertly crafted for the modern palate.</p>
         <div class="footer-socials">
-          <a href="#" class="footer-social"><i class="ri-instagram-line"></i></a>
-          <a href="#" class="footer-social"><i class="ri-twitter-x-line"></i></a>
-          <a href="#" class="footer-social"><i class="ri-linkedin-line"></i></a>
-          <a href="#" class="footer-social"><i class="ri-youtube-line"></i></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="footer-social" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+          <a href="#" class="footer-social" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
         </div>
       </div>
-      <div class="footer-col"><h4>Products</h4><div class="footer-links"><a href="services.html" class="footer-link">Dried Cascara Husks</a><a href="services.html" class="footer-link">Liquid Extracts</a><a href="services.html" class="footer-link">Retail Tea Bags</a><a href="services.html" class="footer-link">Custom Blends</a><a href="services.html" class="footer-link">Wholesale Packs</a></div></div>
-      <div class="footer-col"><h4>Company</h4><div class="footer-links"><a href="about.html" class="footer-link">Our Story</a><a href="about.html" class="footer-link">Team</a><a href="blog.html" class="footer-link">Blog</a><a href="services.html" class="footer-link">Services</a><a href="contact.html" class="footer-link">Careers</a></div></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-links"><div class="footer-contact-item"><i class="ri-map-pin-line"></i><span>14 Brew Lane, London EC1A 1BB</span></div><div class="footer-contact-item"><i class="ri-phone-line"></i><span>+44 20 7946 0321</span></div><div class="footer-contact-item"><i class="ri-mail-line"></i><span>hello@cascaraluxe.com</span></div><div class="footer-contact-item"><i class="ri-time-line"></i><span>Mon–Fri: 9am – 6pm GMT</span></div></div></div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <div class="footer-links">
+          <a href="services.html" class="footer-link">Dried Cascara Husks</a>
+          <a href="services.html" class="footer-link">Liquid Extracts</a>
+          <a href="services.html" class="footer-link">Retail Tea Bags</a>
+          <a href="services.html" class="footer-link">Custom Blends</a>
+          <a href="services.html" class="footer-link">Wholesale Packs</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">Our Story</a>
+          <a href="about.html" class="footer-link">Team</a>
+          <a href="blog.html" class="footer-link">Blog</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Careers</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <div class="footer-contact-item"><i class="ri-map-pin-line"></i><span>14 Brew Lane, London EC1A 1BB</span></div>
+          <div class="footer-contact-item"><i class="ri-phone-line"></i><span>+44 20 7946 0321</span></div>
+          <div class="footer-contact-item"><i class="ri-mail-line"></i><span>hello@cascaraluxe.com</span></div>
+          <div class="footer-contact-item"><i class="ri-time-line"></i><span>Mon–Fri: 9am – 6pm GMT</span></div>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>© 2025 Cascara Luxe Ltd. All rights reserved.</p>
-      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a></div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
     </div>
   </div>
 </footer>
