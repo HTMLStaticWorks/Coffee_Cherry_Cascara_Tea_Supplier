@@ -2888,38 +2888,7 @@ main {
   border-radius: var(--radius-sm);
 }
 
-/* ── Page Loader ────────────────────────────────────────── */
-#page-loader {
-  position: fixed;
-  inset: 0;
-  background: var(--ivory);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
 
-#page-loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader-ring {
-  width: 56px;
-  height: 56px;
-  border: 3px solid var(--border);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-.loader-brand {
-  position: absolute;
-  font-family: var(--font-display);
-  font-size: 1rem;
-  color: var(--gold);
-}
 
 /* ── Animations ─────────────────────────────────────────── */
 @keyframes fadeInUp {

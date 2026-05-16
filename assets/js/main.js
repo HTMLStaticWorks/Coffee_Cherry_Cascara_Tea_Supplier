@@ -3,24 +3,6 @@
    Handles Loader, Navigation, Theme Toggles, and Animations
    ============================================================ */
 
-// ─── 1. Page Loader (Aggressive Check) ───
-const hideLoader = () => {
-    const loader = document.getElementById('page-loader');
-    if (loader) {
-        loader.classList.add('hidden');
-        document.body.style.overflow = 'visible';
-    }
-};
-
-// Run immediately if the page is already loaded
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    setTimeout(hideLoader, 300);
-} else {
-    window.addEventListener('load', () => setTimeout(hideLoader, 500));
-}
-
-// Global fallback to ensure user never gets stuck
-setTimeout(hideLoader, 3000);
 
 
 document.addEventListener('DOMContentLoaded', () => {
