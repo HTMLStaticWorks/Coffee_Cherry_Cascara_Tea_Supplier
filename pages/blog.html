@@ -157,10 +157,10 @@
         <h2 class="section-title">This Month's <em style="font-style:italic;color:var(--gold)">Spotlight</em></h2>
         <div class="divider-gold"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden" class="reveal">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden" class="reveal spotlight-inner">
         <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
              alt="Featured Post" style="width:100%;height:380px;object-fit:cover" loading="lazy" />
-        <div style="padding:2.5rem 2.5rem 2.5rem 0;text-align:center">
+        <div class="spotlight-content" style="padding:2.5rem 2.5rem 2.5rem 0;text-align:center">
           <span class="blog-tag" style="display:inline-block;margin-bottom:1rem">Feature</span>
           <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);margin-bottom:1rem">The Complete Guide to Cascara: History, Health & How to Brew</h2>
           <p style="margin-bottom:1.5rem">Our definitive 5,000-word guide covering everything from the origins of qishr in Yemen to the latest food-science research on coffee fruit polyphenols.</p>
@@ -168,7 +168,7 @@
           <a href="#" class="btn btn-primary">Read Full Guide <i class="ri-book-open-line"></i></a>
         </div>
       </div>
-      <style>@media(max-width:768px){.spotlight-inner{grid-template-columns:1fr!important}.spotlight-inner img{height:220px!important}.spotlight-inner>div{padding:1.5rem!important}}</style>
+
     </div>
   </section>
 
@@ -185,7 +185,7 @@
         <i class="ri-mail-send-line" style="font-size:3rem;color:var(--gold);margin-bottom:1.5rem;display:block"></i>
         <h3 style="font-family:var(--font-display);font-size:1.6rem;color:var(--text-primary);margin-bottom:0.5rem">Get the Cascara Brief</h3>
         <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:2rem">Delivered to 12,000+ subscribers every month.</p>
-        <form id="newsletter-form" style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
+        <form id="newsletter-form" class="newsletter-form" style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
           <input type="email" class="form-input" placeholder="Your email address" style="flex:1;min-width:200px;background:var(--bg-secondary);border-color:var(--border);color:var(--text-primary)" required />
           <button type="submit" class="btn btn-primary">Subscribe <i class="ri-arrow-right-line"></i></button>
         </form>

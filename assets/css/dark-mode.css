@@ -33,3 +33,91 @@
     background: rgba(255,255,255,0.03);
     border-color: rgba(200,146,42,0.1);
 }
+
+/* Fix visibility for marquee and buttons in dark mode */
+[data-theme="dark"] .marquee-strip {
+    background: var(--ivory-dark);
+}
+
+[data-theme="dark"] .btn-primary {
+    color: var(--ivory) !important;
+}
+
+[data-theme="dark"] .btn-primary i {
+    color: var(--ivory) !important;
+}
+
+[data-theme="dark"] .back-to-top {
+    background: var(--ivory-mid);
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+[data-theme="dark"] .back-to-top:hover {
+    background: var(--gold);
+    color: var(--ivory);
+}
+
+/* Fix featured pricing card in dark mode */
+[data-theme="dark"] .pricing-card.featured {
+    background: linear-gradient(160deg, #2D1C0C 0%, #1C1008 100%);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), var(--shadow-gold);
+}
+
+[data-theme="dark"] .pricing-card.featured .pricing-name {
+    color: #FAF6EE !important; /* Force light ivory text on dark card */
+}
+
+[data-theme="dark"] .pricing-card.featured .pricing-tier {
+    color: var(--gold-light) !important;
+    opacity: 1 !important;
+}
+
+[data-theme="dark"] .pricing-card.featured .pricing-per {
+    color: rgba(250, 246, 238, 0.6) !important;
+}
+
+[data-theme="dark"] .pricing-card.featured .pricing-feature {
+    color: rgba(250, 246, 238, 0.8) !important;
+}
+
+/* Force CTA section to stay in "light mode" gold as requested */
+[data-theme="dark"] .cta-section {
+    background: linear-gradient(135deg, #C8922A 0%, #E8B84B 50%, #d4a030 100%) !important;
+}
+
+[data-theme="dark"] .cta-section h2, 
+[data-theme="dark"] .cta-section p,
+[data-theme="dark"] .cta-section .section-label {
+    color: #1C1008 !important;
+}
+
+[data-theme="dark"] .cta-section .btn-dark {
+    background: #1C1008 !important;
+    color: #E8B84B !important;
+}
+
+[data-theme="dark"] .cta-section .btn-outline-white {
+    border-color: #1C1008 !important;
+    color: #1C1008 !important;
+}
+
+[data-theme="dark"] .cta-section .btn-outline-white:hover {
+    background: rgba(28, 16, 8, 0.1) !important;
+}
+
+/* Fix brand and contact icons in dark mode */
+[data-theme="dark"] .brand-logo i,
+[data-theme="dark"] .contact-item-icon i {
+    color: #1C1008 !important; /* Force dark espresso color for icons on gold backgrounds */
+}
+
+/* Fix FAQ items in dark mode */
+[data-theme="dark"] .faq-item {
+    background: var(--bg-card) !important;
+    border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .faq-item summary {
+    color: var(--text-primary) !important;
+}

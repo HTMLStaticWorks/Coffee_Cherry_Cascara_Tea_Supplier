@@ -8,8 +8,19 @@
 }
 
 [dir="rtl"] .nav-desktop,
-[dir="rtl"] .header-actions {
-    flex-direction: row-reverse;
+[dir="rtl"] .header-actions,
+[dir="rtl"] .mobile-actions {
+    flex-direction: row !important;
+}
+
+[dir="rtl"] .header-actions .btn-primary { 
+    margin-right: 0.5rem !important; 
+    margin-left: 0 !important; 
+}
+
+[dir="rtl"] .header-actions .hamburger { 
+    margin-left: 0.5rem !important; 
+    margin-right: 0 !important; 
 }
 
 [dir="rtl"] .hero-stat-num {

@@ -1622,10 +1622,11 @@ main {
 }
 
 .pricing-card.featured {
-  background: linear-gradient(160deg, var(--espresso) 0%, #2d1c0c 100%);
-  border-color: var(--gold);
+  background: var(--bg-card);
+  border: 2px solid var(--gold);
   box-shadow: var(--shadow-gold);
-  transform: scale(1.03);
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .pricing-card:hover {
@@ -1663,7 +1664,7 @@ main {
 }
 
 .pricing-card.featured .pricing-tier {
-  color: var(--gold-light);
+  color: var(--gold);
 }
 
 .pricing-name {
@@ -1675,7 +1676,7 @@ main {
 }
 
 .pricing-card.featured .pricing-name {
-  color: var(--ivory);
+  color: var(--text-primary);
 }
 
 .pricing-main {
@@ -1694,7 +1695,7 @@ main {
 }
 
 .pricing-card.featured .pricing-per {
-  color: rgba(250, 246, 238, 0.5);
+  color: var(--text-muted);
 }
 
 .pricing-features {
@@ -1712,8 +1713,8 @@ main {
 }
 
 .pricing-card.featured .pricing-feature {
-  border-color: rgba(200, 146, 42, 0.15);
-  color: rgba(250, 246, 238, 0.8);
+  border-color: var(--border);
+  color: var(--text-secondary);
 }
 
 .pricing-feature:last-child {
@@ -3059,4 +3060,72 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ── Back to Top ────────────────────────────────────────── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--espresso);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--gold);
+  transform: translateY(20px);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--gold);
+  color: var(--espresso);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ── Blog Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .spotlight-inner {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  
+  .spotlight-inner img {
+    height: 250px !important;
+  }
+  
+  .spotlight-content {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form .form-input,
+  .newsletter-form .btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotlight-inner img {
+    height: 200px !important;
+  }
 }

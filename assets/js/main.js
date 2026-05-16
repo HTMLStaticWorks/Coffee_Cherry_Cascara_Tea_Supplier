@@ -139,4 +139,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // ─── 9. Back to Top Button ───
+    const backToTop = document.createElement('div');
+    backToTop.id = 'backToTop';
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="ri-arrow-up-line"></i>';
+    backToTop.setAttribute('title', 'Back to Top');
+    backToTop.setAttribute('aria-label', 'Back to Top');
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
