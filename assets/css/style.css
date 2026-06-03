@@ -570,6 +570,12 @@ p {
   background: rgba(200, 146, 42, 0.06);
 }
 
+.mobile-nav-link.active {
+  color: var(--gold) !important;
+  background: rgba(200, 146, 42, 0.08) !important;
+  font-weight: 600;
+}
+
 .mobile-nav-link:last-child {
   border-bottom: none;
 }
@@ -1542,61 +1548,94 @@ main {
 .brewing-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
   position: relative;
 }
 
+/* Remove line behind it */
 .brewing-steps::before {
-  content: '';
-  position: absolute;
-  top: 45px;
-  left: calc(16.66% + 1rem);
-  right: calc(16.66% + 1rem);
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-  z-index: 0;
-}
-
-@media (max-width: 768px) {
-  .brewing-steps {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .brewing-steps::before {
-    display: none;
-  }
+  display: none !important;
 }
 
 .brewing-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
   position: relative;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 1;
 }
 
+.brewing-step:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+}
+
 .brewing-step-num {
-  width: 56px;
-  height: 56px;
+  position: absolute;
+  top: -24px;
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--espresso);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--espresso);
-  margin: 0 auto 1.5rem;
   box-shadow: var(--shadow-gold);
+  z-index: 2;
 }
 
-.brewing-step h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
+.brewing-step-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.brewing-step p {
-  font-size: 0.85rem;
+.brewing-step-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.brewing-step:hover .brewing-step-img {
+  transform: scale(1.06);
+}
+
+.brewing-step-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.brewing-step-content p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .brewing-steps {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
 }
 
 /* ── Wholesale Section ──────────────────────────────────── */
@@ -1909,7 +1948,7 @@ main {
 }
 
 /* ── Services Page ──────────────────────────────────────── */
-.services-hero {
+.shop-hero {
   padding: 5rem 0 4rem;
   background: linear-gradient(160deg, var(--espresso) 0%, #2d1c0c 100%);
   text-align: center;
@@ -1917,39 +1956,39 @@ main {
   overflow: hidden;
 }
 
-.services-hero::before {
+.shop-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at center, rgba(200, 146, 42, 0.15) 0%, transparent 70%);
 }
 
-.services-hero .container {
+.shop-hero .container {
   position: relative;
   z-index: 1;
 }
 
-.services-hero h1 {
+.shop-hero h1 {
   color: var(--ivory);
 }
 
-.services-hero .section-label {
+.shop-hero .section-label {
   color: var(--gold-light);
 }
 
-.services-hero p {
+.shop-hero p {
   color: rgba(250, 246, 238, 0.7);
   max-width: 600px;
   margin: 0 auto;
 }
 
-.services-grid {
+.shop-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.service-card {
+.shop-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -1958,44 +1997,44 @@ main {
   text-align: center;
 }
 
-.service-card:hover {
+.shop-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: rgba(200, 146, 42, 0.4);
 }
 
-.service-card-img {
+.shop-card-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   transition: var(--transition);
 }
 
-.service-card:hover .service-card-img {
+.shop-card:hover .shop-card-img {
   transform: scale(1.04);
 }
 
-.service-card-img-wrap {
+.shop-card-img-wrap {
   overflow: hidden;
 }
 
-.service-card-body {
+.shop-card-body {
   padding: 1.75rem;
 }
 
-.service-card-body h3 {
+.shop-card-body h3 {
   font-size: 1.15rem;
   margin-bottom: 0.6rem;
   text-align: center;
 }
 
-.service-card-body p {
+.shop-card-body p {
   font-size: 0.85rem;
   text-align: center;
   margin-bottom: 1.25rem;
 }
 
-.service-tag {
+.shop-tag {
   display: inline-block;
   background: rgba(200, 146, 42, 0.1);
   color: var(--gold);
@@ -2009,19 +2048,19 @@ main {
 }
 
 @media (max-width: 900px) {
-  .services-grid {
+  .shop-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 550px) {
-  .services-grid {
+  .shop-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* Service Calculator */
-.service-calculator {
+/* Shop Calculator */
+.shop-calculator {
   padding: var(--section-pad) 0;
   background: var(--bg-secondary);
 }
@@ -2810,6 +2849,7 @@ main {
 .footer-bottom-links {
   display: flex;
   gap: 1.5rem;
+  padding-right: 4.5rem;
 }
 
 .footer-bottom-links a {
@@ -2836,6 +2876,11 @@ main {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    padding-bottom: 6rem;
+  }
+
+  .footer-bottom-links {
+    padding-right: 0;
   }
 
   .footer-bottom p {

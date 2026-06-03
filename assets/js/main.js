@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Run once on load
 
-    // ─── 7. Calculator Logic (Services Page) ───
+    // ─── 7. Calculator Logic (Shop Page) ───
     const calcBtn = document.getElementById('calc-btn');
     if (calcBtn) {
         calcBtn.addEventListener('click', () => {
