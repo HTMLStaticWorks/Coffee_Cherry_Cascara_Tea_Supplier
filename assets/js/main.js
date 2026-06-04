@@ -3,6 +3,13 @@
    Handles Loader, Navigation, Theme Toggles, and Animations
    ============================================================ */
 
+// Set saved theme and RTL direction immediately on script execution to prevent layout flashes
+(function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const savedDir = localStorage.getItem('dir') || 'ltr';
+    document.documentElement.setAttribute('dir', savedDir);
+})();
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,13 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── 4. Theme Toggle (Light/Dark) ───
     const themeToggles = document.querySelectorAll('.theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    const appliedTheme = document.documentElement.getAttribute('data-theme');
     
     themeToggles.forEach(toggle => {
         const icon = toggle.querySelector('i');
-        if (currentTheme === 'dark' && icon) {
+        if (appliedTheme === 'dark' && icon) {
             icon.classList.replace('ri-moon-line', 'ri-sun-line');
         }
 
@@ -69,8 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
     rtlToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             const currentDir = document.documentElement.getAttribute('dir');
-            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
             document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
         });
     });
 

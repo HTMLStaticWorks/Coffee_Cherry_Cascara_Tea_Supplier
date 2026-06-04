@@ -1021,6 +1021,18 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  .about-img-main {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img-main {
+    height: 280px;
+  }
+}
+
 /* ── Products / Cards Grid ──────────────────────────────── */
 .products-section {
   padding: var(--section-pad) 0;
@@ -1250,6 +1262,12 @@ main {
     gap: 1rem;
   }
 
+  @media (max-width: 480px) {
+    #features .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   #features .feature-card {
     padding: 1.5rem 1rem;
   }
@@ -1419,15 +1437,28 @@ main {
 }
 
 .cta-btns {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 1.25rem;
   justify-content: center;
-  flex-wrap: wrap;
+  max-width: max-content;
+  margin: 0 auto;
 }
 
 .cta-btns .btn {
-  min-width: 220px;
   justify-content: center;
+}
+
+@media (max-width: 550px) {
+  .cta-btns {
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
 
 /* ── Blog Section ───────────────────────────────────────── */
@@ -1635,6 +1666,16 @@ main {
   .brewing-steps {
     grid-template-columns: 1fr;
     gap: 3.5rem;
+  }
+
+  .brewing-step-img-wrap {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brewing-step-img-wrap {
+    height: 200px;
   }
 }
 
@@ -2096,8 +2137,7 @@ main {
   text-transform: uppercase;
 }
 
-.form-input,
-.form-select {
+.form-input {
   padding: 0.75rem 1rem;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
@@ -2109,10 +2149,43 @@ main {
   outline: none;
 }
 
-.form-input:focus,
+.form-select {
+  padding: 0.75rem 2.75rem 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  outline: none;
+  cursor: pointer;
+  
+  /* Custom Dropdown Arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20' fill='%239A7A4A'><path d='M12 16L6 10H18L12 16Z'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 16px;
+  
+  transition: border-color 0.2s ease, background-image 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(200, 146, 42, 0.12);
+}
+
 .form-select:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(200, 146, 42, 0.12);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20' fill='%23C8922A'><path d='M12 16L6 10H18L12 16Z'></path></svg>");
+}
+
+.form-select:hover {
+  border-color: var(--gold);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20' fill='%23C8922A'><path d='M12 16L6 10H18L12 16Z'></path></svg>");
 }
 
 .form-input.error {

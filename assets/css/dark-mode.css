@@ -121,3 +121,14 @@
 [data-theme="dark"] .faq-item summary {
     color: var(--text-primary) !important;
 }
+
+/* Fix form select arrow colors in dark theme */
+[data-theme="dark"] .form-select:hover,
+[data-theme="dark"] .form-select:focus {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20' fill='%23E8B84B'><path d='M12 16L6 10H18L12 16Z'></path></svg>");
+}
+
+/* Fix brewing step numbers readability in dark mode */
+[data-theme="dark"] .brewing-step-num {
+    color: #1C1008 !important;
+}
